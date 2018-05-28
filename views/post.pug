@@ -1,0 +1,24 @@
+html
+    head
+        title Blog
+
+    body
+
+
+        h2 #{post.desc}
+        p #{post.nblike} like, #{post.Nbcomment} comment(s), #{post.share} share
+        form(method="POST" action="/likePost/" + post.id )
+            <input class="btn btn-info btn-lg" type="submit" value="like">
+
+        p donner votre avis
+            form(method="POST" )
+                textarea(id="desc", name="desc", placeholder="Some great article content...")
+                <input class="btn btn-info btn-lg" type="submit" value="usefull">
+
+        p La liste des commentaires
+        for comment in comments
+            h1 #{comment.userName}
+            h2 #{comment.desc}
+            p #{comment.NbLike} like
+            form(method="POST" action="/likePostComment/" + comment.id )
+                <input class="btn btn-info btn-lg" type="submit" value="like">

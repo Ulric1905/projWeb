@@ -1,0 +1,24 @@
+html
+    head
+        title Blog
+        link(rel="stylesheet" type="text/css" href="/css/mycss.css")
+
+    body
+        if error
+            h1 #{error}
+        else
+
+            div(class="log")
+
+
+                    for relation in relations
+
+                        <h1> #{relation.User2} Send you an invitation
+                        form(method="POST" action="/accppted/" + relation.id )
+                            <input class="btn btn-info btn-lg" type="submit" value="add">
+                        form(method="POST" action="/refuse/" + relation.id )
+                            <input class="btn btn-info btn-lg" type="submit" value="no">
+
+
+
+

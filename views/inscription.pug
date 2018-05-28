@@ -1,0 +1,16 @@
+html
+    head
+        title Blog
+        link(rel="stylesheet" type="text/css" href="/css/mycss.css")
+
+    body
+        if error
+            h1 #{error}
+        else
+
+            div(class="log")
+                h1 inscription
+                form(method="post")
+                    input(type="email", name="username", placeholder="email")
+                    input(type="password", name="password", placeholder="password")
+                    button(type="submit") let's go

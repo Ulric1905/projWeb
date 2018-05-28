@@ -1,0 +1,29 @@
+
+.log{
+    margin-top: 5%;
+    margin-left: 15%;
+    border-radius: 30%;
+    border-style: solid;
+    border-width: 5px;
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    padding-top: 5%;
+    padding-left: 10%;
+    position: fixed;
+}
+.listGame{
+    background-color: ghostwhite;
+    float: right;
+    width: 15%;
+    border-radius: 3%;
+}
+
+Article{
+    background-color: aliceblue;
+    border-radius: 3%;
+}
+.myInfo{
+    position: absolute;
+    width: 10%;
+}

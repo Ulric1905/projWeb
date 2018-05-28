@@ -1,0 +1,57 @@
+html
+    head
+        title Blog
+        link(rel="stylesheet" type="text/css" href="/css/mycss.css")
+
+    body
+    if user
+        form(method="POST")
+            div(class="log")
+                strong Create a new Post
+                br
+                label(for="title") Title
+                    textarea(id="desc", name="desc", placeholder="Some great article content...")
+                    br
+                    button(type="submit") post
+
+
+            div(class="myInfo")
+                h1 #{user.email}
+                a(href="/addFriend")
+                    h3 Add friend
+                a(href="/invitation")
+                    h3 Invitation
+
+                for relation in relations
+                    h3 #{relation.User1} and #{relation.User2} are friend
+
+
+
+
+
+
+        div(class="listGame")
+            for post in posts
+                    article
+
+                            h1 #{post.user}
+                            h1 #{post.desc}
+
+                            p #{post.nblike} like, #{post.Nbcomment} comment(s), #{post.share} share
+                            form(method="POST" action="/likePost/" + post.id )
+                                <input class="btn btn-info btn-lg" type="submit" value="like">
+                            form(method="POST" action="/post/" + post.id )
+                                <input class="btn btn-info btn-lg" type="submit" value="comment">
+
+
+
+
+
+    else
+        p Please log in.
+        a(href="/login") login
+
+
+
+
+

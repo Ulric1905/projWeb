@@ -1,0 +1,16 @@
+html
+    head
+        title Blog
+    body
+        for article in articles
+            article
+                h1 #{article.title}
+                p #{article.content}
+        form(method="POST")
+            p
+                strong Create a new article
+            label(for="title") Title
+            input(type="text", id="title", name="title", placeholder="Some Great Article Title")
+            label(for="content") Content
+            textarea(id="content", name="content", placeholder="Some great article content...")
+            button(type="submit") Post
