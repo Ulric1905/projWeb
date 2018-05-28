@@ -114,7 +114,8 @@ const Post = db.define('post', {
 
 const User = db.define('user', {
     email: { type: Sequelize.TEXT },
-    password: { type: Sequelize.TEXT }
+    password: { type: Sequelize.TEXT },
+    role: { type: Sequelize.TEXT },
 });
 
 app.get('/addFriend', (req, res) => {
@@ -270,3 +271,13 @@ db.sync();
 app.listen(3000, () => {
     console.log('Listening on port 3000');
 });
+
+//
+// function isAuthentificated() {
+//     if(req.user && req.user.role === 'admin'){
+//         return next()
+//     }
+//     return res.redirect('/');
+// }
+// router.use('/',website);
+// router.use('/admin',isAuthentificated(), admin);

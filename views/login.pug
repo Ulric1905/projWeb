@@ -9,10 +9,24 @@ html
         else
             form(method="post")
                 div(class="log")
-                    h2 Login
-                    input(type="email", name="username", placeholder="email")
-                    input(type="password", name="password", placeholder="password")
-                    button(type="submit") Log in
-                    br
-                    a(href="/inscription") Inscription
+                    div(class="restoflog")
+                        div(class="logTitle")
+                            h2(class="logTitle2") Welcome back! Please login.
+                        div(class="containLog")
+                            p(class="textLog") Sign in with your e-mail address
+                            input(type="email", name="username", class="inputLog", placeholder="email")
+                            p(class="textLog") Password
+                            input(type="password", name="password", class="inputLog", placeholder="password")
+                            button(type="submit", class="bouttonLog") Sign in the Dashboard
+                            br
+                            p(class="logWithOther") login via social network
+                            div(class="flexButton")
+                                button(type="submit", class="bouttonNet")
+                                button(type="submit", class="bouttonNet")
+                                button(type="submit", class="bouttonNet")
+                                button(type="submit", class="bouttonNet")
+
+
+                    a(href="/inscription", class="otherChoice") Don't have an account yet? Get Started
+                    a(href="/inscription", class="otherChoice right") Forget Password?
 

@@ -1,16 +1,21 @@
 
 .log{
-    margin-top: 5%;
-    margin-left: 15%;
-    border-radius: 30%;
-    border-style: solid;
-    border-width: 5px;
-    position: absolute;
+    margin-top: 15%;
+    margin-left: auto;
+    margin-right: auto;
     width: 30%;
-    height: 30%;
-    padding-top: 5%;
-    padding-left: 10%;
-    position: fixed;
+}
+.log p{
+    color: gray;
+}
+.log h2{
+    color: gray;
+}
+.restoflog{
+
+    border: solid 1px gray;
+
+    background-color: white;
 }
 .listGame{
     background-color: ghostwhite;
@@ -26,4 +31,62 @@ Article{
 .myInfo{
     position: absolute;
     width: 10%;
+}
+body{
+    background-color: ghostwhite;
+}
+.logTitle{
+    background-color: ghostwhite;
+}
+.logTitle2{
+    margin: 0px;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-bottom: solid 1px gray;
+}
+.containLog{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.inputLog{
+    width: 100%;
+    background-color: ghostwhite;
+    border-radius: 5px;
+    border: solid 1px gray;
+    height: 4%;
+    text-indent:5px;
+}
+.bouttonLog{
+    width: 100%;
+    margin-top: 4%;
+    background-color: seagreen;
+    color: white;
+    border: solid 1px gray;
+    border-radius: 5px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.textLog{
+    margin-bottom: 1%;
+}
+.logWithOther{
+    text-align: center;
+}
+.flexButton{
+    display: flex;
+    width: 100%;
+}
+.bouttonNet{
+    padding: 10%;
+    margin: 2%;
+}
+.otherChoice{
+    margin-left: auto;
+    margin-right: auto;
+    color: gray;
+    text-decoration: none;
+}
+.right{
+    float: right;
 }
